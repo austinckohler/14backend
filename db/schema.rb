@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_06_16_213510) do
   create_table "supplies", force: :cascade do |t|
     t.string "category"
     t.string "item"
+    t.boolean "completed"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -20,7 +20,7 @@ class SuppliesController < ApplicationController
     private
 
     def supply_params
-        params.require(:supply).permit(:category, :item).merge(user_id: @user_id)
+        params.require(:supply).permit(:category, :item, :completed).merge(user_id: @user_id)
     end
 end
 
