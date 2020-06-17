@@ -1,5 +1,39 @@
 
-user1 = User.create(username: 'jim', password: 'bob')
+user1 = User.create(username: 'jim', password: 'jim')
+user2 = User.create(username: 'sam', password: 'sam')
+user3 = User.create(username: 'rosie', password: 'rosie')
+user4 = User.create(username: 'tori', password: 'tori')
+user5 = User.create(username: 'mike', password: 'mike')
+
+sleeping_bag = Supply.create(category: 'Sleeping', item: 'Sleeping Bag', user: user1)
+tent = Supply.create(category: 'Sleeping', item: 'Tent', user: user2)
+sleeping_pad = Supply.create(category: 'Sleeping', item: 'Sleeping Pad', user: user2)
+camping_pillow = Supply.create(category: 'Sleeping', item: 'Camping Pillow', user: user3)
+
+tooth_brush = Supply.create(category: 'Hygiene', item: 'Tooth Brush', user: user1)
+tooth_paste = Supply.create(category: 'Hygiene', item: 'Tooth Paste', user: user4)
+chapstick = Supply.create(category: 'Hygiene', item: 'Chapstick', user: user4)
+eyedrops = Supply.create(category: 'Hygiene', item: 'Eyedrops', user: user5)
+
+rain_jacket = Supply.create(category: 'Clothing', item: 'Rain Jacket', user: user5)
+puffy = Supply.create(category: 'Clothing', item: 'Puffy', user: user4)
+wool_socks = Supply.create(category: 'Clothing', item: 'Wool Socks', user: user2)
+boots = Supply.create(category: 'Clothing', item: 'Boots', user: user1)
+
+foil = Supply.create(category: 'Food', item: 'Aluminum Foil', user: user3)
+trash_bags= Supply.create(category: 'Food', item: 'Trash Bags', user: user2)
+beer = Supply.create(category: 'Food', item: 'Beer', user: user2)
+cutting_board = Supply.create(category: 'Food', item: 'Cutting Board', user: user5)
+
+first_aid = Supply.create(category: 'Health', item: 'First Aid Kit', user: user4)
+sunscreen = Supply.create(category: 'Health', item: 'Sunscreen', user: user3)
+bug_spray = Supply.create(category: 'Health', item: 'Bug Spray', user: user2)
+electrolytes = Supply.create(category: 'Health', item: 'Electrolytes', user: user1)
+
+head_lamp = Supply.create(category: 'Misc', item: 'Head Lamp', user: user5)
+lighter = Supply.create(category: 'Misc', item: 'Lighter', user: user4)
+camp_chair = Supply.create(category: 'Misc', item: 'Camping Chairs', user: user3)
+hammock = Supply.create(category: 'Misc', item: 'Hammock', user: user2)
 
 elbert = Peak.create(name: 'Mt. Elbert', range: 'Sawatch Range', rank: 1, elevation: 14433, town: 'Leadville, Twin Lakes, Aspen', lat: 39.117, long: -106.44, image: "photos/elbert.jpg"),
 massive= Peak.create(name: 'Mt. Massive', range: 'Sawatch Range', rank:  2, elevation: 14421, town: 'Leadville, Aspen', lat: 39.18, long: -106.47, image: "/photos/massive.jpg"),

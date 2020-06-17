@@ -16,10 +16,10 @@ class AuthenticationController < ApplicationController
                     user_id: @user.id
                 }
             else
-                render json: {message: "Incorrect Username"}, status: :unauthorized
+                render json: {message: "Incorrect Password"}, status: :unauthorized
             end
         else
-            render json: {message: "Incorrect Password"}, status: :unauthorized
+            render json: {message: "Incorrect Username"}, status: :unauthorized
         end
     end
 end
