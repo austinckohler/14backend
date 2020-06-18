@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-# before_action :authenticate, only: [:index, :show]
+before_action :authenticate, only: [:index, :show]
 
     def index
         @users = User.all
@@ -16,7 +16,10 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save
-            render json: @user
+            payload = { user_id: @user.id }
+            secret = Rails.application.secrets.secret_key_base
+            token = JWT.encode(payload, secret)
+            render json: { message: "#{@user.username} was sucessfully created", token: token }
         else
             render json: { message: @user.errors.messages }
         end
